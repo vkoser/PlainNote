@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>CDate</key>
+		<date>2010-02-03T00:59:05Z</date>
+		<key>Text</key>
+		<string>Welcome to PlainNote: You can add notes and delete notes using the simple standard fast iPhone interface.  You can also use the lower left button to send a note to an email address.</string>
+	</dict>
+	<dict>
+		<key>CDate</key>
+		<date>2010-02-02T01:56:43Z</date>
+		<key>Text</key>
+		<string>PlainNote is open source visit http://plainnote.kosertech.com for more information</string>
+	</dict>
+</array>
+</plist>
