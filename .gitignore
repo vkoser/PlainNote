@@ -1,5 +1,0 @@
-# Can ignore specific files
-PlainNote.xcodeproj/vkoser*
-
-# directories to ignore
-build/
