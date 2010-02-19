@@ -11,7 +11,7 @@
 #import <MessageUI/MFMailComposeViewController.h>
 
 
-@interface DetailNoteViewControler : UIViewController <MFMailComposeViewControllerDelegate> {
+@interface DetailNoteViewControler : UIViewController <MFMailComposeViewControllerDelegate,UIAlertViewDelegate,UITextViewDelegate> {
 	NSDictionary *Notedict;
 	IBOutlet UITextView *NoteDetail;
 	NSMutableArray *noteArray;
@@ -20,6 +20,7 @@
 //	IBOutlet UIBarButtonItem *upButton;
 //	IBOutlet UIBarButtonItem *dnButton;
 	BOOL keyboardVisible;
+	BOOL didEdit;
 	IBOutlet UIScrollView *scrollView;
 
 	
@@ -28,7 +29,7 @@
 
 
 @property (nonatomic, retain) NSMutableArray* noteArray;
-@property (nonatomic,retain) UITextView *NoteDetail;
+@property (nonatomic, retain) UITextView *NoteDetail;
 @property (nonatomic, retain) NSDictionary *Notedict;
 @property (nonatomic, retain) UIBarButtonItem *mailButton;
 @property (nonatomic, retain) UIScrollView *scrollView;
@@ -39,6 +40,7 @@
 
 -(void)keyboardDidShow:(NSNotification *)notif;
 -(void)keyboardDidHide:(NSNotification *)notif;
+-(void)textViewDidChange:(UITextView *)NoteDetail;
 
 - (IBAction) save: (id) sender;
 - (IBAction) cancel: (id) sender;

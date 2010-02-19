@@ -28,6 +28,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	NoteDetail.delegate = self;
+	didEdit = NO;
 	keyboardVisible = NO;
 	scrollView.contentSize = self.view.frame.size;
 	
@@ -196,9 +198,47 @@
 
 - (IBAction) cancel: (id) sender { 
 //	NSLog(@"Cancel pressed!"); 
-	[self dismissModalViewControllerAnimated:YES];
+	// handle popup warning of unsaved changes
+	
+	if(!didEdit)
+	{
+		[self dismissModalViewControllerAnimated:YES];
+	}
+	else
+	{	
+		// open a alert with an OK and cancel button
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unsaved Changes!" message:@"Close without saving?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+		[alert show];
+		[alert release];
+		
+	}
+		
+	
+
 }
 	
+
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+	// the user clicked one of the OK/Cancel buttons
+	if (buttonIndex == 0)
+	{
+		//NSLog(@"cancel")
+		
+	}
+	else
+	{
+		[self dismissModalViewControllerAnimated:YES];
+		//NSLog(@"ok");
+	}
+}
+
+- (void)textViewDidChange:(UITextView *)NoteDetail{
+	
+	//text field has started edit session show warning on cancel without save
+	didEdit = YES;
+	//NSLog(@"didEdit=YES");
+	
+}
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
