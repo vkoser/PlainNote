@@ -3,7 +3,7 @@
 //  PlainNote
 //
 //  Created by Vincent Koser on 1/27/10.
-//  Copyright Apple Inc 2010. All rights reserved.
+//  Copyright kosertech 2010. All rights reserved.
 //
 
 #import "PlainNoteAppDelegate.h"

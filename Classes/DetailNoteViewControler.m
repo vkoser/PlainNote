@@ -3,7 +3,7 @@
 //  PlainNote
 //
 //  Created by Vincent Koser on 1/28/10.
-//  Copyright 2010 Apple Inc. All rights reserved.
+//  Copyright 2010 kosertech. All rights reserved.
 //
 
 #import "DetailNoteViewControler.h"
@@ -67,6 +67,13 @@
 -(void) viewWillDisappear:(BOOL)animated {
 	//NSLog (@"Unregsitering for keyboard events");
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	
+	
+	//if we edited lets save the note in case we're exiting for a text or incoming call
+	if(didEdit){
+		[self savePlist];
+		
+	}
 }
 
 /*
@@ -166,6 +173,16 @@
 		return;
 		
 	}
+	
+	[self savePlist];
+	
+//	NSLog(@"Save pressed!");
+	[self dismissModalViewControllerAnimated:YES];
+}
+
+
+- (void) savePlist{
+	
 	// Create a new  dictionary for the new values 
 	NSMutableDictionary* newNote = [[NSMutableDictionary alloc] init]; 
 	
@@ -192,9 +209,10 @@
 	[nameSorter release];
 	
 	
-//	NSLog(@"Save pressed!");
-	[self dismissModalViewControllerAnimated:YES];
+	
 }
+
+
 
 - (IBAction) cancel: (id) sender { 
 //	NSLog(@"Cancel pressed!"); 
@@ -248,10 +266,14 @@
 }
 
 - (void)viewDidUnload {
+	
+//	NSLog(@"viewDidUnload");
+	
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
+
 
 
 - (void)dealloc {

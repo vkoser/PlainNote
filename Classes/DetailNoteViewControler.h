@@ -3,7 +3,7 @@
 //  PlainNote
 //
 //  Created by Vincent Koser on 1/28/10.
-//  Copyright 2010 Apple Inc. All rights reserved.
+//  Copyright kosertech 2010. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -27,7 +27,6 @@
 }
 
 
-
 @property (nonatomic, retain) NSMutableArray* noteArray;
 @property (nonatomic, retain) UITextView *NoteDetail;
 @property (nonatomic, retain) NSDictionary *Notedict;
@@ -41,7 +40,7 @@
 -(void)keyboardDidShow:(NSNotification *)notif;
 -(void)keyboardDidHide:(NSNotification *)notif;
 -(void)textViewDidChange:(UITextView *)NoteDetail;
-
+-(void)savePlist;
 - (IBAction) save: (id) sender;
 - (IBAction) cancel: (id) sender;
 - (IBAction) mailButtonAction: (id) sender;
