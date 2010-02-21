@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
+#import "instaPaperLib.h"
 
-
-@interface DetailNoteViewControler : UIViewController <MFMailComposeViewControllerDelegate,UIAlertViewDelegate,UITextViewDelegate> {
+@interface DetailNoteViewControler : UIViewController <MFMailComposeViewControllerDelegate,UIAlertViewDelegate,UITextViewDelegate,UIActionSheetDelegate> {
 	NSDictionary *Notedict;
 	IBOutlet UITextView *NoteDetail;
 	NSMutableArray *noteArray;
@@ -41,6 +41,7 @@
 -(void)keyboardDidHide:(NSNotification *)notif;
 -(void)textViewDidChange:(UITextView *)NoteDetail;
 -(void)savePlist;
+-(void)popupActionSheet;
 - (IBAction) save: (id) sender;
 - (IBAction) cancel: (id) sender;
 - (IBAction) mailButtonAction: (id) sender;

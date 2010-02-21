@@ -12,8 +12,11 @@
 @implementation instaPaperLib
 
 
+// returns YES if everythign went ok returns NO if a bad status or connection error
 -(BOOL) postToInstapaperWithUserName:(NSString*)username andPassword:(NSString*)password 
 							 andBody:(NSString*)PostText andURL:(NSString*)url andTitle:(NSString*)title{
+	
+	BOOL responseCode = NO;
 	
 	/// post in the form of
 	// www.instapaper.com/api/add?username=username&password=password&selection=this%20is%20some%20sample%20text&url=www.urlhere.com
@@ -45,9 +48,10 @@
 	if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300) {
 		NSLog(@"Response: %@", result);
 		//here you get the response
+		responseCode = YES;
 	}
 	
-	return YES;
+	return responseCode;
 }
 
 @end

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		07AB17A2111E729300294A0C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07AB17A1111E729300294A0C /* MessageUI.framework */; };
+		07E1216B1130B3C6007CA860 /* instaPaperLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E1216A1130B3C6007CA860 /* instaPaperLib.m */; };
+		07E121BD1131C0D8007CA860 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07E121BC1131C0D8007CA860 /* Settings.bundle */; };
 		07E2738B1113C523009E1A39 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E2738A1113C523009E1A39 /* Icon.png */; };
 		07EDCEFA1111E01D00340F08 /* NotesList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07EDCEF91111E01D00340F08 /* NotesList.plist */; };
 		07EDCF0B1111E1A500340F08 /* DetailNoteViewControler.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EDCF091111E1A500340F08 /* DetailNoteViewControler.m */; };
@@ -24,6 +26,9 @@
 
 /* Begin PBXFileReference section */
 		07AB17A1111E729300294A0C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		07E121691130B3C6007CA860 /* instaPaperLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = instaPaperLib.h; sourceTree = "<group>"; };
+		07E1216A1130B3C6007CA860 /* instaPaperLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = instaPaperLib.m; sourceTree = "<group>"; };
+		07E121BC1131C0D8007CA860 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		07E2738A1113C523009E1A39 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		07EDCEF91111E01D00340F08 /* NotesList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NotesList.plist; sourceTree = "<group>"; };
 		07EDCF081111E1A500340F08 /* DetailNoteViewControler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailNoteViewControler.h; sourceTree = "<group>"; };
@@ -62,6 +67,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				07E121691130B3C6007CA860 /* instaPaperLib.h */,
+				07E1216A1130B3C6007CA860 /* instaPaperLib.m */,
 				07EDCF081111E1A500340F08 /* DetailNoteViewControler.h */,
 				07EDCF091111E1A500340F08 /* DetailNoteViewControler.m */,
 				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
@@ -86,6 +93,7 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources-iPhone */,
+				07E121BC1131C0D8007CA860 /* Settings.bundle */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -179,6 +187,7 @@
 				07EDCEFA1111E01D00340F08 /* NotesList.plist in Resources */,
 				07EDCF0C1111E1A500340F08 /* DetailNoteViewControler.xib in Resources */,
 				07E2738B1113C523009E1A39 /* Icon.png in Resources */,
+				07E121BD1131C0D8007CA860 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +202,7 @@
 				1D3623260D0F684500981E51 /* PlainNoteAppDelegate.m in Sources */,
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
 				07EDCF0B1111E1A500340F08 /* DetailNoteViewControler.m in Sources */,
+				07E1216B1130B3C6007CA860 /* instaPaperLib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

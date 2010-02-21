@@ -9,9 +9,10 @@
 #import "DetailNoteViewControler.h"
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
+#import "instaPaperLib.h"
 
 @implementation DetailNoteViewControler 
-@synthesize NoteDetail, Notedict, noteArray, mailButton, scrollView /*, upButton, dnButton */;
+@synthesize NoteDetail, Notedict, noteArray, mailButton, scrollView;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -131,27 +132,76 @@
 
 // to handle in app mail
 - (IBAction) mailButtonAction: (id) sender {
-	MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
-	picker.mailComposeDelegate = self;
+	// pop the popup action sheet to show the available options
+	[self popupActionSheet];
+}
+
+-(void)popupActionSheet {
+	UIActionSheet *popupQuery = [[UIActionSheet alloc]
+								 initWithTitle:nil
+								 delegate:self
+								 cancelButtonTitle:@"Cancel"
+								 destructiveButtonTitle:nil
+								 otherButtonTitles:@"Mail Note",@"Instapaper",nil];
 	
-	[picker setSubject:@"A Note from PlainNote!"];
+	popupQuery.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+	[popupQuery showInView:self.view];
+	[popupQuery release];
+}
+
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
 	
-	
-	// Set up recipients
-//	NSArray *toRecipients = [NSArray arrayWithObject:@"first@example.com"]; 
-//	NSArray *ccRecipients = [NSArray arrayWithObjects:@"second@example.com", @"third@example.com", nil]; 
-//	NSArray *bccRecipients = [NSArray arrayWithObject:@"fourth@example.com"]; 
-	
-//	[picker setToRecipients:toRecipients];
-//	[picker setCcRecipients:ccRecipients];	
-//	[picker setBccRecipients:bccRecipients];
-	
-	// Fill out the email body text
-	NSString *emailBody = self.NoteDetail.text;
-	[picker setMessageBody:emailBody isHTML:NO];
-	
-	[self presentModalViewController:picker animated:YES];
-    [picker release];
+	if (buttonIndex == 0) {
+		// mail note
+		
+		MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+		picker.mailComposeDelegate = self;
+		
+		[picker setSubject:@"A Note from PlainNote!"];
+		
+		
+		// Set up recipients	
+		// Fill out the email body text
+		NSString *emailBody = self.NoteDetail.text;
+		[picker setMessageBody:emailBody isHTML:NO];
+		
+		[self presentModalViewController:picker animated:YES];
+		[picker release];
+		
+		
+	} else if (buttonIndex == 1) {
+		// instapaper
+				
+		// read prefs for user/pass
+		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+		NSString *username = [defaults stringForKey:@"username_preference"];
+		NSString *password = [defaults stringForKey:@"password_preference"];
+		
+		instaPaperLib *IPLib = [[instaPaperLib alloc] init];
+		BOOL response = [IPLib postToInstapaperWithUserName:username 
+												andPassword:password 
+													andBody:NoteDetail.text 
+													 andURL:@"plainnote.kosertech.com" 
+												   andTitle:@"Note from PlainNote"];
+		
+		
+		if(response){
+			//NSLog(@"Good status");
+			
+		}
+		else{
+			//NSLog(@"Bad Status");
+			
+			UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Network error" message: @"Error sending your info to the server" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+			[someError show];
+			[someError release];
+			
+		}		
+		
+		[IPLib release];
+		
+	}
 }
 
 /*

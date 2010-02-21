@@ -118,10 +118,6 @@
     
     static NSString *CellIdentifier = @"Cell";
     
-	
-
-
-	
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
        // cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
@@ -136,8 +132,6 @@
 	//cell.textLabel.backgroundColor = [UIColor darkGrayColor];
 	cell.textLabel.text = [[self.Notes objectAtIndex:indexPath.row ]objectForKey:@"Text"];
 
-	
-	
 	NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
 	[dateFormat setDateFormat: @"yyyy-MM-dd HH:mm:ss zzz"];
 	
