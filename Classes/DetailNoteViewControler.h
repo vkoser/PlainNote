@@ -22,6 +22,7 @@
 	BOOL keyboardVisible;
 	BOOL didEdit;
 	IBOutlet UIScrollView *scrollView;
+	IBOutlet UIToolbar *toolBar;
 
 	
 }
@@ -32,6 +33,7 @@
 @property (nonatomic, retain) NSDictionary *Notedict;
 @property (nonatomic, retain) UIBarButtonItem *mailButton;
 @property (nonatomic, retain) UIScrollView *scrollView;
+@property (nonatomic, retain) UIToolbar *toolBar;
 
 //@property (nonatomic, retain) UIBarButtonItem *upButton;
 //@property (nonatomic, retain) UIBarButtonItem *dnButton;

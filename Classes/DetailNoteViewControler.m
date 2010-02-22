@@ -12,7 +12,7 @@
 #import "instaPaperLib.h"
 
 @implementation DetailNoteViewControler 
-@synthesize NoteDetail, Notedict, noteArray, mailButton, scrollView;
+@synthesize NoteDetail, Notedict, noteArray, mailButton, scrollView, toolBar;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -100,8 +100,8 @@
 	
 	//resize the scroll view
 	CGRect viewFrame = self.view.frame; 
-	viewFrame.size.height -= keyboardSize.height;
-	
+	viewFrame.size.height -= (keyboardSize.height);
+	viewFrame.size.height -= [toolBar frame].size.height;
 	scrollView.frame = viewFrame;
 	
 	//change the button to a done instead of save
@@ -250,6 +250,9 @@
 	
 	// Add it to the master  array and release our reference 
 	[noteArray addObject:newNote]; 
+	
+	//important, without this it double creates your saved note on exit due to saving on viewWillDissapear
+	didEdit = NO;
 	
 	[newNote release];	
 	
