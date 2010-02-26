@@ -12,13 +12,16 @@
 	NSMutableArray* Notes;
 	IBOutlet UIBarButtonItem *addButtonItem;
 	IBOutlet UITableView *listTableView;
+	IBOutlet UIBarButtonItem *helpButton;
 }
 @property (nonatomic, retain) NSMutableArray* Notes;
 @property (nonatomic, retain) UIBarButtonItem* addButtonItem;
+@property (nonatomic, retain) UIBarButtonItem* helpButton;
 @property (nonatomic, retain) UITableView* listTableView;
 
 
 - (IBAction) addButtonPressed: (id) sender;
+- (IBAction) helpButtonPressed: (id) sender;
 
 - (NSString *)applicationDocumentsDirectory;
 - (void)createEditableCopyOfDatabaseIfNeeded;

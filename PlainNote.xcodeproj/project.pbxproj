@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071C609111375CAE00651FCF /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 071C608F11375CAE00651FCF /* WebViewController.m */; };
+		071C609211375CAE00651FCF /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 071C609011375CAE00651FCF /* WebViewController.xib */; };
+		071C60B51137612E00651FCF /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 071C60B41137612E00651FCF /* index.html */; };
+		0735106A1135841F006E7F15 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 0735105F1135841F006E7F15 /* NSObject+SBJSON.m */; };
+		0735106B1135841F006E7F15 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 073510611135841F006E7F15 /* NSString+SBJSON.m */; };
+		0735106C1135841F006E7F15 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 073510631135841F006E7F15 /* SBJSON.m */; };
+		0735106D1135841F006E7F15 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 073510651135841F006E7F15 /* SBJsonBase.m */; };
+		0735106E1135841F006E7F15 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 073510671135841F006E7F15 /* SBJsonParser.m */; };
+		0735106F1135841F006E7F15 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 073510691135841F006E7F15 /* SBJsonWriter.m */; };
 		07AB17A2111E729300294A0C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07AB17A1111E729300294A0C /* MessageUI.framework */; };
 		07E1216B1130B3C6007CA860 /* instaPaperLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E1216A1130B3C6007CA860 /* instaPaperLib.m */; };
 		07E121BD1131C0D8007CA860 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07E121BC1131C0D8007CA860 /* Settings.bundle */; };
@@ -25,6 +34,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		071C608E11375CAE00651FCF /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		071C608F11375CAE00651FCF /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		071C609011375CAE00651FCF /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WebViewController.xib; path = Classes/WebViewController.xib; sourceTree = "<group>"; };
+		071C60B41137612E00651FCF /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		0735105D1135841F006E7F15 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		0735105E1135841F006E7F15 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		0735105F1135841F006E7F15 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		073510601135841F006E7F15 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		073510611135841F006E7F15 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		073510621135841F006E7F15 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		073510631135841F006E7F15 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		073510641135841F006E7F15 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		073510651135841F006E7F15 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		073510661135841F006E7F15 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		073510671135841F006E7F15 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		073510681135841F006E7F15 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		073510691135841F006E7F15 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		07AB17A1111E729300294A0C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		07E121691130B3C6007CA860 /* instaPaperLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = instaPaperLib.h; sourceTree = "<group>"; };
 		07E1216A1130B3C6007CA860 /* instaPaperLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = instaPaperLib.m; sourceTree = "<group>"; };
@@ -64,9 +90,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0735105C1135841F006E7F15 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				0735105D1135841F006E7F15 /* JSON.h */,
+				0735105E1135841F006E7F15 /* NSObject+SBJSON.h */,
+				0735105F1135841F006E7F15 /* NSObject+SBJSON.m */,
+				073510601135841F006E7F15 /* NSString+SBJSON.h */,
+				073510611135841F006E7F15 /* NSString+SBJSON.m */,
+				073510621135841F006E7F15 /* SBJSON.h */,
+				073510631135841F006E7F15 /* SBJSON.m */,
+				073510641135841F006E7F15 /* SBJsonBase.h */,
+				073510651135841F006E7F15 /* SBJsonBase.m */,
+				073510661135841F006E7F15 /* SBJsonParser.h */,
+				073510671135841F006E7F15 /* SBJsonParser.m */,
+				073510681135841F006E7F15 /* SBJsonWriter.h */,
+				073510691135841F006E7F15 /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0735105C1135841F006E7F15 /* JSON */,
 				07E121691130B3C6007CA860 /* instaPaperLib.h */,
 				07E1216A1130B3C6007CA860 /* instaPaperLib.m */,
 				07EDCF081111E1A500340F08 /* DetailNoteViewControler.h */,
@@ -75,6 +122,8 @@
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				1D3623240D0F684500981E51 /* PlainNoteAppDelegate.h */,
 				1D3623250D0F684500981E51 /* PlainNoteAppDelegate.m */,
+				071C608E11375CAE00651FCF /* WebViewController.h */,
+				071C608F11375CAE00651FCF /* WebViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -112,12 +161,14 @@
 		29B97317FDCFA39411CA2CEA /* Resources-iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				071C609011375CAE00651FCF /* WebViewController.xib */,
 				07E2738A1113C523009E1A39 /* Icon.png */,
 				07EDCF0A1111E1A500340F08 /* DetailNoteViewControler.xib */,
 				28F335F01007B36200424DE2 /* RootViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* PlainNote-Info.plist */,
 				07EDCEF91111E01D00340F08 /* NotesList.plist */,
+				071C60B41137612E00651FCF /* index.html */,
 			);
 			name = "Resources-iPhone";
 			sourceTree = "<group>";
@@ -188,6 +239,8 @@
 				07EDCF0C1111E1A500340F08 /* DetailNoteViewControler.xib in Resources */,
 				07E2738B1113C523009E1A39 /* Icon.png in Resources */,
 				07E121BD1131C0D8007CA860 /* Settings.bundle in Resources */,
+				071C609211375CAE00651FCF /* WebViewController.xib in Resources */,
+				071C60B51137612E00651FCF /* index.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +256,13 @@
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
 				07EDCF0B1111E1A500340F08 /* DetailNoteViewControler.m in Sources */,
 				07E1216B1130B3C6007CA860 /* instaPaperLib.m in Sources */,
+				0735106A1135841F006E7F15 /* NSObject+SBJSON.m in Sources */,
+				0735106B1135841F006E7F15 /* NSString+SBJSON.m in Sources */,
+				0735106C1135841F006E7F15 /* SBJSON.m in Sources */,
+				0735106D1135841F006E7F15 /* SBJsonBase.m in Sources */,
+				0735106E1135841F006E7F15 /* SBJsonParser.m in Sources */,
+				0735106F1135841F006E7F15 /* SBJsonWriter.m in Sources */,
+				071C609111375CAE00651FCF /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

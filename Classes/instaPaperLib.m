@@ -43,6 +43,7 @@
 	NSHTTPURLResponse* urlResponse = nil;
 	NSError *error = [[NSError alloc] init];
 	NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
+	//result not really needed unless desired 
 	NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
 	NSLog(@"Response Code: %d", [urlResponse statusCode]);
 	if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300) {
@@ -50,6 +51,9 @@
 		//here you get the response
 		responseCode = YES;
 	}
+	
+	
+
 	
 	return responseCode;
 }

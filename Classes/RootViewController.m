@@ -8,15 +8,18 @@
 
 #import "RootViewController.h"
 #import "DetailNoteViewControler.h"
+#import "WebViewController.h"
 
 @implementation RootViewController
-@synthesize Notes, addButtonItem, listTableView;
+@synthesize Notes, addButtonItem, listTableView, helpButton;
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
 	self.navigationItem.rightBarButtonItem = self.addButtonItem;
+	
+	
 	[self createEditableCopyOfDatabaseIfNeeded];	
 	
 	//theme info
@@ -54,6 +57,17 @@
 	
 	
 }
+
+- (IBAction) helpButtonPressed: (id) sender { 
+	WebViewController *webViewVC = [[WebViewController alloc] initWithNibName:@"WebViewController" bundle:nil];
+	
+	[self.navigationController pushViewController:webViewVC animated:YES];
+	
+	
+	[webViewVC release];
+	
+}
+
 
 
 - (void)viewWillAppear:(BOOL)animated {
