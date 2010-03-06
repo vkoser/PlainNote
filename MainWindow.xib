@@ -66,7 +66,6 @@
 					<bool key="IBUIOpaque">NO</bool>
 					<bool key="IBUIClipsSubviews">YES</bool>
 					<int key="IBUIContentMode">4</int>
-					<bool key="IBUIMultipleTouchEnabled">YES</bool>
 				</object>
 				<object class="NSMutableArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -75,6 +74,15 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBUIBarButtonItem" id="500761278">
 								<string key="IBUITitle">Help</string>
+								<int key="IBUIStyle">1</int>
+								<reference key="IBUIToolbar"/>
+							</object>
+							<object class="IBUIBarButtonItem" id="674046047">
+								<reference key="IBUIToolbar"/>
+								<int key="IBUISystemItemIdentifier">5</int>
+							</object>
+							<object class="IBUIBarButtonItem" id="320648776">
+								<string key="IBUITitle">Sync</string>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar"/>
 							</object>
@@ -135,6 +143,22 @@
 					</object>
 					<int key="connectionID">26</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">syncButton</string>
+						<reference key="source" ref="619226028"/>
+						<reference key="destination" ref="320648776"/>
+					</object>
+					<int key="connectionID">30</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">syncButtonPressed:</string>
+						<reference key="source" ref="320648776"/>
+						<reference key="destination" ref="619226028"/>
+					</object>
+					<int key="connectionID">31</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -192,6 +216,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="394667715"/>
 							<reference ref="500761278"/>
+							<reference ref="320648776"/>
+							<reference ref="674046047"/>
 						</object>
 						<reference key="parent" ref="701001926"/>
 					</object>
@@ -213,6 +239,16 @@
 						<reference key="object" ref="500761278"/>
 						<reference key="parent" ref="619226028"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">28</int>
+						<reference key="object" ref="320648776"/>
+						<reference key="parent" ref="619226028"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">29</int>
+						<reference key="object" ref="674046047"/>
+						<reference key="parent" ref="619226028"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -228,6 +264,8 @@
 					<string>2.IBEditorWindowLastContentRect</string>
 					<string>2.IBPluginDependency</string>
 					<string>24.IBPluginDependency</string>
+					<string>28.IBPluginDependency</string>
+					<string>29.IBPluginDependency</string>
 					<string>3.CustomClassName</string>
 					<string>3.IBPluginDependency</string>
 					<string>9.IBEditorWindowLastContentRect</string>
@@ -250,9 +288,11 @@
 					<string>{{673, 376}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>PlainNoteAppDelegate</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{302, 365}, {320, 480}}</string>
+					<string>{{411, 350}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>
@@ -272,7 +312,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">26</int>
+			<int key="maxID">31</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -321,9 +361,11 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>addButtonPressed:</string>
 							<string>helpButtonPressed:</string>
+							<string>syncButtonPressed:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -335,12 +377,14 @@
 							<string>addButtonItem</string>
 							<string>helpButton</string>
 							<string>listTableView</string>
+							<string>syncButton</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIBarButtonItem</string>
 							<string>UIBarButtonItem</string>
 							<string>UITableView</string>
+							<string>UIBarButtonItem</string>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">

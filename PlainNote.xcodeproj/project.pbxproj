@@ -10,6 +10,7 @@
 		071C609111375CAE00651FCF /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 071C608F11375CAE00651FCF /* WebViewController.m */; };
 		071C609211375CAE00651FCF /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 071C609011375CAE00651FCF /* WebViewController.xib */; };
 		071C60B51137612E00651FCF /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 071C60B41137612E00651FCF /* index.html */; };
+		071C8C451138BDC8007C241B /* syncPlainNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 071C8C441138BDC8007C241B /* syncPlainNote.m */; };
 		0735106A1135841F006E7F15 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 0735105F1135841F006E7F15 /* NSObject+SBJSON.m */; };
 		0735106B1135841F006E7F15 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 073510611135841F006E7F15 /* NSString+SBJSON.m */; };
 		0735106C1135841F006E7F15 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 073510631135841F006E7F15 /* SBJSON.m */; };
@@ -38,6 +39,8 @@
 		071C608F11375CAE00651FCF /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		071C609011375CAE00651FCF /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WebViewController.xib; path = Classes/WebViewController.xib; sourceTree = "<group>"; };
 		071C60B41137612E00651FCF /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		071C8C431138BDC8007C241B /* syncPlainNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = syncPlainNote.h; sourceTree = "<group>"; };
+		071C8C441138BDC8007C241B /* syncPlainNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = syncPlainNote.m; sourceTree = "<group>"; };
 		0735105D1135841F006E7F15 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		0735105E1135841F006E7F15 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		0735105F1135841F006E7F15 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				1D3623250D0F684500981E51 /* PlainNoteAppDelegate.m */,
 				071C608E11375CAE00651FCF /* WebViewController.h */,
 				071C608F11375CAE00651FCF /* WebViewController.m */,
+				071C8C431138BDC8007C241B /* syncPlainNote.h */,
+				071C8C441138BDC8007C241B /* syncPlainNote.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				0735106E1135841F006E7F15 /* SBJsonParser.m in Sources */,
 				0735106F1135841F006E7F15 /* SBJsonWriter.m in Sources */,
 				071C609111375CAE00651FCF /* WebViewController.m in Sources */,
+				071C8C451138BDC8007C241B /* syncPlainNote.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

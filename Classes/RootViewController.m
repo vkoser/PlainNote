@@ -9,9 +9,10 @@
 #import "RootViewController.h"
 #import "DetailNoteViewControler.h"
 #import "WebViewController.h"
+#import "syncPlainNote.h"
 
 @implementation RootViewController
-@synthesize Notes, addButtonItem, listTableView, helpButton;
+@synthesize Notes, addButtonItem, listTableView, helpButton, syncButton;
 
 
 - (void)viewDidLoad {
@@ -66,6 +67,21 @@
 	
 	[webViewVC release];
 	
+}
+
+- (IBAction) syncButtonPressed: (id) sender { 
+	self.navigationItem.prompt = @"Syncing with host";
+	[self.view setNeedsDisplay];
+
+	syncPlainNote *pnSync = [[syncPlainNote alloc] init];
+	
+	NSString *myUUID = [pnSync GetUUID];
+	
+	NSDictionary *loginResponse = [pnSync loginWithUsername:@"user" andPassword:@"pass" andUUID:myUUID];
+	
+	[syncPlainNote release];
+	
+	self.navigationItem.prompt = nil;
 }
 
 
