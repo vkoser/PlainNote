@@ -79,6 +79,35 @@
 	
 	NSDictionary *loginResponse = [pnSync loginWithUsername:@"user" andPassword:@"pass" andUUID:myUUID];
 	
+	
+	
+	// we need to loop through all the notes and upload them
+	// the server should ignore anything newer on the server side
+	
+	for (id thisNote in Notes) {
+		
+		NSString *content =[thisNote objectForKey:@"Text"];
+		NSString *account_id = [loginResponse objectForKey:@"account_id"];
+	
+		
+		//we have to urlencode the string
+		NSString * encodedContent = (NSString *)CFURLCreateStringByAddingPercentEscapes(
+																						NULL,
+																						(CFStringRef)content,
+																						NULL,
+																						(CFStringRef)@"!*'();:@&=+$,/?%#[]",
+																						kCFStringEncodingUTF8 );
+		
+	//	NSLog(@"Sending %@",content);
+		NSInteger retStatus = [pnSync postNoteWithAccountID:account_id 
+												andDeviceID:myUUID 
+												  andPostID:@"fdsa-fdsa-32fds-32fdsa" 
+												 andContent:encodedContent];
+	
+		
+	}
+	
+	
 	[syncPlainNote release];
 	
 	self.navigationItem.prompt = nil;
